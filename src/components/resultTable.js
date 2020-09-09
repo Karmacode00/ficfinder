@@ -1,9 +1,16 @@
-import React from 'react';
+/* eslint-disable react-hooks/rules-of-hooks */
+import React, { useState, useEffect } from 'react';
 import { Table } from 'reactstrap';
 import data from '../data/data.json';
 import Linkify from 'react-linkify';
 
 const resultTable = (props) => {
+  const [dataTemp, setDataTemp] = useState(data);
+
+  useEffect(() => {
+    console.log(dataTemp)
+
+  },[dataTemp])
   return (
     <div className="p-3">
     <Table striped responsive bordered>
@@ -21,7 +28,7 @@ const resultTable = (props) => {
       </tr>
     </thead>
     <tbody>
-    {data.map(fics => {
+    {dataTemp.map(fics => {
             return (
               <tr>
                 <td>{fics.Title}</td>
@@ -30,7 +37,7 @@ const resultTable = (props) => {
                 <td>{fics.Status}</td>
                 <td>{fics.Rating}</td>
                 <td>{fics['Word Count']}</td>
-                <td>{fics.Tags.TW}</td>
+                <td>{fics['Tags/TW']}</td>
             <td><Linkify componentDecorator={(decoratedHref, decoratedText, key) => (
         <a target="blank" href={decoratedHref} key={key}>
             {decoratedText}

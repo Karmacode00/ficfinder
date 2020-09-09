@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import Header from './components/header';
-import FilterBar from './components/filterBar';
+//import FilterBar from './components/filterBar';
 import ResultTable from './components/resultTable';
 
 class App extends Component {
