@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ficfinder/precache-manifest.9e8c2e7a47b71e3ea825a46997613c3e.js"
+  "/ficfinder/precache-manifest.1b038b6831d54def8d7438ef2d91697b.js"
 );
 
 self.addEventListener('message', (event) => {
